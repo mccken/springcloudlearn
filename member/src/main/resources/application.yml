@@ -1,0 +1,34 @@
+server:
+  port: 8781
+#  port: 8782
+
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://localhost:8761/eureka/
+  
+spring:    
+  application:
+    name: member
+      
+feign:
+  hystrix:
+    enabled: true
+    
+###配置请求超时时间
+hystrix:
+  commond:
+    default:
+      excution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 7000
+
+
+###设置feign客户端超时时间
+###SpringCloud feign 默认开启支持ribbon
+ribbon:
+  ###指的是建立连接所用的时间，适用于网络状况正常的情况下，两端连接所用的时间。
+  ReadTimeout:  5000
+  ###指的是建立连接后从服务器读取到可用资源所用的时间。
+  ConnecTimeout: 5000    
