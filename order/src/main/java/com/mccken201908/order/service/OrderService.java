@@ -16,7 +16,7 @@ public class OrderService {
 
 	public List<McckenOrder> selectAllOrder() {
 		McckenOrderExample example = new McckenOrderExample();
-		example.createCriteria().andUuidEqualTo("1");
+//		example.createCriteria().andUuidEqualTo("2");
 		
 		return this.mcckenOrderDAO.selectByExample(example);
 	}
