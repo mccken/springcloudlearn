@@ -26,8 +26,20 @@ spring:
         reset-enable: false
         login-username: root
         login-password: root
-
-
+      web-stat-filter:
+        enabled: true
+        exclusions:
+          - "*.js"
+          - "*.gif"
+          - "*.jpg"
+          - "*.png"
+          - "*.css"
+          - "*.ico"
+          - "/druid/*"
+#        principal-session-name: USER_SESSION
+        principal-cookie-name: USER_COOKIE
+        session-stat-enable: true
+      aop-patterns: com.mccken201908.order.dao.*
 
 eureka:
   client:

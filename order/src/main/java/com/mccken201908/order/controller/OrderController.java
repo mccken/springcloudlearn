@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 @RestController
 public class OrderController {
 	
@@ -30,9 +34,9 @@ public class OrderController {
 	Logger log= LogManager.getLogger(OrderController.class);
 	
 	@GetMapping("/hi-order")
-	public List<McckenOrder> selectAllOrder() {
-
+	public List<McckenOrder> selectAllOrder(HttpServletRequest request, HttpServletResponse response) {
 		log.error("222222222222222222");
+	request.getSession().setAttribute("USER_SESSION", "mccken");
 		return this.orderService.selectAllOrder();
 	}
 	
