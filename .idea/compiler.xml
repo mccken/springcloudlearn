@@ -25,12 +25,12 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="eureka-server" options="" />
-      <module name="member" options="" />
-      <module name="order" options="" />
-      <module name="product" options="" />
-      <module name="springcloudlearn" options="" />
-      <module name="zuul-server" options="" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="member" options="-parameters" />
+      <module name="order" options="-parameters" />
+      <module name="product" options="-parameters" />
+      <module name="springcloudlearn" options="-parameters" />
+      <module name="zuul-server" options="-parameters" />
     </option>
   </component>
 </project>

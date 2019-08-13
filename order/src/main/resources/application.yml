@@ -1,31 +1,31 @@
 server:
-#  port: 8771
-  port: 8772
+  port: 8771
+#  port: 8772
 
 spring:
   application:
     name: order
   datasource:
-#    url: jdbc:mysql://192.168.1.94:3306/mccken201908?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
-    url: jdbc:mysql://localhost:3306/mccken201908?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://192.168.1.94:3306/mccken201908?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+#    url: jdbc:mysql://localhost:3306/mccken201908?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
-##    password: root
-    password: luo2010.
-#    druid:
-#      initial-size: 5
-#      min-idle: 5
-#      max-active: 20
-#      max-wait: 5000
-#      filters: stat,wall
-#      # druid 监控页面
-#      stat-view-servlet:
-#        enabled: true
-#        url-pattern: /druid/*
-#        reset-enable: false
-#        login-username: root
-#        login-password: root
-#      time-between-log-stats-millis: 300000
+    password: root
+#    password: luo2010.
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 5000
+      filters: stat,wall
+
+      # druid 监控页面
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        reset-enable: false
+        login-username: root
+        login-password: root
 
 
 
