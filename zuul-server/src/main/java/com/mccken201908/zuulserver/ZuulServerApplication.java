@@ -6,8 +6,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @SpringBootApplication
-@EnableZuulProxy
-@EnableEurekaClient
+//@EnableZuulProxy
+//@EnableEurekaClient
 public class ZuulServerApplication {
 
 	public static void main(String[] args) {
@@ -15,3 +15,4 @@ public class ZuulServerApplication {
 	}
 
 }
+                                      

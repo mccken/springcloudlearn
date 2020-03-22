@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @FeignClient("order")
 public interface OrderApi {
-	
+
 	@GetMapping(value = "/show-order")
 	public String helloOrder(String orderId);
 }

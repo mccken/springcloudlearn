@@ -33,11 +33,10 @@ public class SqlFilterEventAdapter extends FilterEventAdapter {
 
 	//含有某字段的所有表
 	private String[] tables = {"mccken_order", "B", "C"};
-	
+
 	@Override
 	public PreparedStatementProxy connection_prepareStatement(FilterChain chain,
 	                                                          ConnectionProxy connection, String sql) throws SQLException {
-		
 
 		//格式化输出
 		String result = SQLUtils.formatMySql(sql);
@@ -45,7 +44,7 @@ public class SqlFilterEventAdapter extends FilterEventAdapter {
 
 		//将string类型转换为sql对象
 		SQLExpr exp = SQLUtils.toMySqlExpr(sql);
-		
+
 		logger.info(JSON.toJSONString(exp));
 
 		//判断是否是查询sql
@@ -70,7 +69,7 @@ public class SqlFilterEventAdapter extends FilterEventAdapter {
 			String name = getName(from);
 			//如果获取到name，说明查询到有某字段的表
 			String appendJoinCondition = "";
-			
+
 			// 举个例子：对sql语句进行操作，加入一个关联查询（D加入表名，d别名 ，c字段 , f查询条件）
 			appendJoinCondition = " join D d " + name
 					+ ".c = d.c and d.c = f";

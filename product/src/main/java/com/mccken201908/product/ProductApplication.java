@@ -1,6 +1,7 @@
 package com.mccken201908.product;
 
 import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -22,10 +23,10 @@ public class ProductApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ProductApplication.class, args);
 	}
-	
+
 	@Bean
 	@LoadBalanced
-	RestTemplate restTemplate(){
+	RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
 

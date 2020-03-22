@@ -7,11 +7,11 @@ spring:
     name: order
   datasource:
     url: jdbc:mysql://192.168.1.94:3306/mccken201908?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
-#    url: jdbc:mysql://localhost:3306/mccken201908?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    #    url: jdbc:mysql://localhost:3306/mccken201908?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
     password: root
-#    password: luo2010.
+    #    password: luo2010.
     druid:
       initial-size: 5
       min-idle: 5
@@ -36,7 +36,7 @@ spring:
           - "*.css"
           - "*.ico"
           - "/druid/*"
-#        principal-session-name: USER_SESSION
+        #        principal-session-name: USER_SESSION
         principal-cookie-name: USER_COOKIE
         session-stat-enable: true
       aop-patterns: com.mccken201908.order.dao.*

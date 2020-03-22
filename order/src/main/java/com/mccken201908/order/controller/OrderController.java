@@ -18,26 +18,26 @@ import javax.servlet.http.HttpSession;
 
 @RestController
 public class OrderController {
-	
+
 	@Value("${server.port}")
 	private String port;
-	
+
 	@Autowired
 	private OrderService orderService;
-	
+
 	@GetMapping("/show-order")
 	public String showOrder(String orderId) {
-		
+
 		return "show port: " + port + ", orderId is: " + orderId;
 	}
 
-	Logger log= LogManager.getLogger(OrderController.class);
-	
+	Logger log = LogManager.getLogger(OrderController.class);
+
 	@GetMapping("/hi-order")
 	public List<McckenOrder> selectAllOrder(HttpServletRequest request, HttpServletResponse response) {
 		log.error("222222222222222222");
-	request.getSession().setAttribute("USER_SESSION", "mccken");
+		request.getSession().setAttribute("USER_SESSION", "mccken");
 		return this.orderService.selectAllOrder();
 	}
-	
+
 }

@@ -38,6 +38,5 @@ public class SqlParser {
 		System.out.println("group by\t\t" + visitor.getGroupByColumns());
 		System.out.println("order by\t\t" + visitor.getOrderByColumns());
 
-
 	}
 }
