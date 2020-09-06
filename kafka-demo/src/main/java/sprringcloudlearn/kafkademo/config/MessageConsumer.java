@@ -20,10 +20,14 @@ public class MessageConsumer {
 	@KafkaListener(topics = {"test"})
 	public void consumer(ConsumerRecord consumerRecord) {
 		Optional kafkaMsg = Optional.ofNullable(consumerRecord.value());
+		System.out.println(111);
 		if (kafkaMsg.isPresent()) {
-			Object msg = kafkaMsg.get();
-			System.err.println(msg);
+			System.out.println(222);
+//			Object msg = kafkaMsg.get();
+//			System.err.println(msg);
 		}
+
+		System.out.println(333);
 	}
 
 }

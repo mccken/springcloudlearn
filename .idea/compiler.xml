@@ -2,20 +2,22 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-server" />
+        <module name="product" />
         <module name="member" />
         <module name="order" />
-        <module name="product" />
-        <module name="springcloudlearn" />
         <module name="zuul-server" />
+        <module name="kafka-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="eureka-server" target="1.8" />
+      <module name="kafka-demo" target="1.8" />
       <module name="member" target="1.8" />
       <module name="order" target="1.8" />
       <module name="product" target="1.8" />
@@ -26,6 +28,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eureka-server" options="-parameters" />
+      <module name="kafka-demo" options="-parameters" />
       <module name="member" options="-parameters" />
       <module name="order" options="-parameters" />
       <module name="product" options="-parameters" />
