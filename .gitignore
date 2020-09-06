@@ -5,3 +5,13 @@
 /.idea/libraries/Maven__org_webjars_d3js_3_4_11.xml
 /.idea/libraries/Maven__org_webjars_jquery_2_1_1.xml
 /.idea/jarRepositories.xml
+kafka-demo/src/main/resources/static/
+kafka-demo/src/main/resources/templates/
+.gitignore
+.mvn/
+mvnw
+mvnw.cmd
+pom.xml
+.idea
+
+#!/.idea/
