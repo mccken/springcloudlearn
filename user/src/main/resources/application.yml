@@ -1,0 +1,31 @@
+server:
+  port: 8175
+#  port: 8777
+
+spring:
+  application:
+    name: user
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+#配置Hystrix的超时时间要大于ribbon的超时时间，否则会在接口调用还未完成的时候直接进入回调方法。
+###配置请求超时时间
+hystrix:
+  commond:
+    default:
+      excution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 7000
+
+
+###设置feign客户端超时时间
+###SpringCloud feign 默认开启支持ribbon
+ribbon:
+  ###指的是建立连接所用的时间，适用于网络状况正常的情况下，两端连接所用的时间。
+  ReadTimeout:  8000
+  ###指的是建立连接后从服务器读取到可用资源所用的时间。
+  ConnecTimeout: 8000
