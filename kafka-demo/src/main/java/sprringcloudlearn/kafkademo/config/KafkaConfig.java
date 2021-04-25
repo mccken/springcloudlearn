@@ -36,7 +36,7 @@ public class KafkaConfig {
 		ConcurrentKafkaListenerContainerFactory<Object, Object> factory = new ConcurrentKafkaListenerContainerFactory<>();
 		configurer.configure(factory, kafkaConsumerFactory);
 		factory.setErrorHandler(new SeekToCurrentErrorHandler(
-				new DeadLetterPublishingRecoverer(template), 3));
+				new DeadLetterPublishingRecoverer(template), 3L));
 		return factory;
 	}
 
