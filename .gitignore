@@ -8,3 +8,14 @@ kafka-demo/kafka-demo.iml
 springcloudlearn.iml
 
 */.gitignore
+.DS_Store
+eureka-server/src/main/.DS_Store
+eureka-server/target/
+kafka-demo/src/main/resources/static/
+kafka-demo/src/main/resources/templates/
+
+user/src/main/java/generated-sources/
+user/src/main/java/target/
+user/src/main/resources/static/
+user/src/main/resources/templates/
+
