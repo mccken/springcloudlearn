@@ -73,7 +73,7 @@
         <spring-boot-starter-amqp.version>2.1.8.RELEASE</spring-boot-starter-amqp.version>
         <skywalking-apm-tools.version>6.2.0</skywalking-apm-tools.version>
         <lombok.version>1.18.8</lombok.version>
-        <xxl-job.version>2.1.0</xxl-job.version>
+        <xxl-job.version>2.3.0</xxl-job.version>
         <mybatis-plus-generator.version>3.2.0</mybatis-plus-generator.version>
         <freemarker.version>2.3.28</freemarker.version>
         <easyexcel.version>2.2.6</easyexcel.version>
