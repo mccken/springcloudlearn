@@ -84,7 +84,7 @@
         <vipthink-hmac.version>1.0.0-RELEASE</vipthink-hmac.version>
         <!--		<druid.version>1.1.17</druid.version>-->
         <druid.version>1.1.21</druid.version>
-        <springfox-swagger.version>2.9.2</springfox-swagger.version>
+        <springfox-swagger.version>2.10.0</springfox-swagger.version>
         <swagger-annotation.version>1.5.21</swagger-annotation.version>
         <aic-common.version>2.0.11-SNAPSHOT</aic-common.version>
         <pageHelper>1.3.0</pageHelper>
